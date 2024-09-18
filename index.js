@@ -45,20 +45,26 @@ function calculateAge (){
            months.textContent = ""
            days.textContent = ""
          }
-         console.log(dayRounded)
+
+        var yearText = (yearsFin > 1)
+        ? "years" : "year";
+        var monthText = (monthsFin > 1) 
+        ? "months" : "month";
+        var dayText = (dayRounded > 1)
+        ? "days" : "day";
 
         if(monthInputVal > actualMonth){
-                           years.textContent = yearsFin - 1
-                           months.textContent = monthsFin - actualMonth
-                           days.textContent = dayRounded
-                    if(dayRounded > 30.4){months.textContent = monthsFin + 1
-                                      days.textContent = dayRounded -30.4}
+                           years.textContent = yearsFin - 1 + yearText
+                           months.textContent = monthsFin - actualMonth + monthText
+                           days.textContent = dayRounded + dayText
+                    if(dayRounded > 30.4){months.textContent = monthsFin + 1 + monthText
+                                      days.textContent = dayRounded -30.4 + dayText}
         }
-         else{years.textContent = yearsFin
-              months.textContent = monthsFin
-              days.textContent = dayRounded
-           if(dayNum > 30.4){months.textContent = monthsFin + 1
-                             days.textContent = dayRounded -30.4}
+         else{years.textContent = yearsFin + yearText
+              months.textContent = monthsFin + monthText
+              days.textContent = dayRounded + dayText
+           if(dayNum > 30.4){months.textContent = monthsFin + 1 + monthText
+                             days.textContent = dayRounded -30.4 + dayText}
          }
          
 }
