@@ -46,11 +46,11 @@ function calculateAge (){
            days.textContent = ""
          }
 
-        var yearText = (yearsFin > 1)
+        var yearText = (yearsFin >= 1)
         ? "years" : "year";
-        var monthText = (monthsFin > 1) 
+        var monthText = (monthsFin >= 1) 
         ? "months" : "month";
-        var dayText = (dayRounded > 1)
+        var dayText = (dayRounded >= 1)
         ? "days" : "day";
 
         if(monthInputVal > actualMonth){
