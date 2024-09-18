@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+  background-color: violet;
+  height: 100vh; 
+  margin: 0; 
+}
+
+.center {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.container {
+  align-items: center;
+  width: 700px;
+  padding: 2em;
+  background-color: white;
+  box-shadow: 10px 10px 0px 10px black;
+  text-align: center;
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: .3em;
+  box-shadow: 2px 2px 0px 2px violet;
+  padding: .3em;
+}
+
+.results {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  font-size: 58px;
+}
+
+.result-item {
+  margin: 0.5em 0; 
+}
+
+.big {
+  color: purple;
+}
+
+.header-btn {
+  z-index: 1;
+  padding: .2em 3em;
+  position: relative;
+  top: 4em; 
+  margin-left: 3.3em;
+  border-radius: 10em;
+  background-color: purple;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+.header-btn:hover {
+  box-shadow: 3px 3px 0px 3px violet;
+  background-color: lightpurple; 
+}
+  </style>
+</head>
+<body>
+<div class="center">
+<div class="container">
+  <div class="inputs_header" style="display: flex; flex-direction: row;">
+<div class="header">
+  <h4 class="header_text">Day</h4>
+    <input type="number" class="header_day">
+</div>
+<div class="header">
+  <h4 class="header_text">Month</h4>
+    <input type="number" class="header_month">
+</div>
+<div class="header">
+  <h4 class="header_text">Year</h4>
+    <input type="number" class="header_year">
+</div>
+<button class="header-btn" onclick="calculateAge()">
+  <>
+</button>
+</div>
+<hr></hr>
+  <div class="results">
+  <div class="big" id="year"></div><b>years</b>
+  <div class="big" id="months"></div><b>months</b>
+  <div class="big" id="days"></div><b>days</b>
+  </div>
+</div>
+</div>
+  <script type="" src="index.js"></script>
+
+</body>
+</html>
